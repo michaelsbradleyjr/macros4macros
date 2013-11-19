@@ -8,6 +8,7 @@
 
 (ns macros4macros
   (:require [cljs.analyzer :as cljs]
+            [clojure.string :as string]
             clojure.walk))
 
 (declare ap
@@ -36,6 +37,7 @@
          debug-1
          debug-all
          expand-symbol
+         indent-4
          ppstring
          prccon)
 
@@ -87,12 +89,14 @@
                       (str "BEFORE " which
                            "\n"
                            "\n"
-                           (ppstring form))
+                           (indent-4 (ppstring form)))
+                      "\n"
                       "\n"
                       (str "AFTER " which
                            "\n"
                            "\n"
-                           (ppstring expanded))
+                           (indent-4 (ppstring expanded)))
+                      "\n"
                       "\n")]
     (*out-fn* expstrng)))
 
@@ -157,6 +161,10 @@
   obtained with &env within a macro definition."
   [env sym]
   (:name (cljs/resolve-var env sym)))
+
+(defn- indent-4
+  [s]
+  (string/join "\n" (map #(str "    " %) (string/split-lines s))))
 
 (defn ppstring
   [v]
