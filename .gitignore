@@ -1,0 +1,17 @@
+fuse*
+.DS_Store
+*~
+*.*~
+.*.sw*
+._*
+.#*
+*.swp
+
+.repl/
+checkouts/
+repl/
+target/
+
+.lein-*
+.nrepl-port
+pom.xml
