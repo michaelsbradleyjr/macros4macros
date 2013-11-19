@@ -1,4 +1,4 @@
-(defproject macros4macros "0.1.1-SNAPSHOT"
+(defproject macros4macros "0.1.1"
   :description "Macros and supporting functions for macro development and debugging in ClojureScript projects."
   :license {:name "Eclipse Public License 1.0"
             :url "http://opensource.org/licenses/eclipse-1.0.php"}
