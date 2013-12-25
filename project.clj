@@ -5,5 +5,5 @@
   :url "https://github.com/michaelsbradleyjr/macros4macros"
 
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [org.clojure/clojurescript "0.0-2030"]]
+                 [org.clojure/clojurescript "0.0-2127"]]
   :source-paths ["src"])
