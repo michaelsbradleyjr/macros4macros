@@ -4,7 +4,7 @@ Macros and supporting functions for macro development and debugging in ClojureSc
 
 ## Releases and Dependency Information
 
-Latest release: 0.1.1
+Latest release: 0.1.2
 
 * [All Released Versions](https://clojars.org/macros4macros/versions)
 
@@ -12,17 +12,7 @@ Latest release: 0.1.1
 
 ```clj
 [org.clojure/clojure "1.5.1"]
-[org.clojure/clojurescript "0.0-2030"]
-```
-
-[Maven](http://maven.apache.org/) dependency information:
-
-```xml
-<dependency>
-  <groupId>macros4macros</groupId>
-  <artifactId>macros4macros</artifactId>
-  <version>0.1.0</version>
-</dependency>
+[org.clojure/clojurescript "0.0-2127"]
 ```
 
 ## Copyright and License
