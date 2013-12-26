@@ -12,13 +12,12 @@
             clojure.walk))
 
 (declare ap
-         cljs-macroexpand*
-         cljs-macroexpand-1*
-         cljs-macroexpand-all*
-
          cljs-macroexpand
+         cljs-macroexpand*
          cljs-macroexpand-1
+         cljs-macroexpand-1*
          cljs-macroexpand-all
+         cljs-macroexpand-all*
          debug-*
 
          ->compiler-console
