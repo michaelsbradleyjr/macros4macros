@@ -64,6 +64,12 @@
   [& args]
   (ap cljs-macroexpand-1*))
 
+(defn cljs-macroexpand-1*
+  [env form]
+  (if (sequential? form)
+    (cljs/macroexpand-1 env form)
+    form))
+
 (defmacro cljs-macroexpand-all
   [& args]
   (ap cljs-macroexpand-all*))
