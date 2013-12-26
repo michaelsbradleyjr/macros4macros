@@ -4,7 +4,7 @@ Macros and supporting functions for macro development and debugging in ClojureSc
 
 ## Releases and Dependency Information
 
-Latest release: 0.1.1
+Latest release: 0.1.2
 
 * [All Released Versions](https://clojars.org/macros4macros/versions)
 
