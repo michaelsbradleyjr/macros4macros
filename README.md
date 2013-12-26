@@ -12,17 +12,7 @@ Latest release: 0.1.2
 
 ```clj
 [org.clojure/clojure "1.5.1"]
-[org.clojure/clojurescript "0.0-2030"]
-```
-
-[Maven](http://maven.apache.org/) dependency information:
-
-```xml
-<dependency>
-  <groupId>macros4macros</groupId>
-  <artifactId>macros4macros</artifactId>
-  <version>0.1.0</version>
-</dependency>
+[org.clojure/clojurescript "0.0-2127"]
 ```
 
 ## Copyright and License
