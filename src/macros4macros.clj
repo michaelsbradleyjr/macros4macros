@@ -49,24 +49,16 @@
   [f]
   `(apply ~f (conj 'args '&env)))
 
+(defmacro cljs-macroexpand
+  [& args]
+  (ap cljs-macroexpand*))
+
 (defn cljs-macroexpand*
   [env form]
   (let [ex (cljs-macroexpand-1* env form)]
     (if (identical? ex form)
       form
       (recur env ex))))
-
-(defn cljs-macroexpand-1*
-  [env form]
-  (cljs/macroexpand-1 env form))
-
-(defn cljs-macroexpand-all*
-  [env form]
-  (clojure.walk/prewalk (fn [x] (if (seq? x) (cljs-macroexpand* env x) x)) form))
-
-(defmacro cljs-macroexpand
-  [& args]
-  (ap cljs-macroexpand*))
 
 (defmacro cljs-macroexpand-1
   [& args]
@@ -75,6 +67,10 @@
 (defmacro cljs-macroexpand-all
   [& args]
   (ap cljs-macroexpand-all*))
+
+(defn cljs-macroexpand-all*
+  [env form]
+  (clojure.walk/prewalk (fn [x] (if (seq? x) (cljs-macroexpand* env x) x)) form))
 
 (defn- debug-*
   [env which expander args]
